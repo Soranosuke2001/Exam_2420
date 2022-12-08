@@ -78,6 +78,12 @@ The output of running the script
 
 ![running the script](images/ss13.png)
 
+## Part 5
+
+1. Service file contents
+
+![](images/ss14.png)
+
  
 
 
