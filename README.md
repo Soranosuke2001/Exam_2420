@@ -16,4 +16,69 @@ Written By: Sora Schlegel
 
 3. You should also restart your kernel when prompted after the installation is complete.
 
+## Part Two
+
+1. Replace the "1" in the first line to a "0" using the command: `:s/1/0/g 1`
+
+![replacing 1 to 0](images/ss1.png)
+
+2. Replacing all "V" to "C" by using the command: `:%s/V/C/g`
+
+![replacing V to C](images/ss2.png)
+
+3. Replacing the "numbs" to ":digit:" by using the command: `:%s/numbs/\:digit\:/g`
+
+![replacing numbs to :digit:](images/ss3.png)
+
+4. Replacing all "eco" to "echo" by using the command: `:%s/eco/echo/g`
+
+![replacing echo to echo](images/ss4.png)
+
+The final result is the screen shot below.
+
+![final result](images/ss5.png)
+
+## Part Three
+
+1. Open the man page for the `journalctl` command by using the command: `man journalctl`
+
+2. To find the option to display the current boot logs in the man page, use the command: `/current boot` in the man page.
+
+![searching for current boot in man page](images/ss6.png)
+
+3. To find the option to set the priority of the logs to be "warnings", use the command: `/priority` in the man page.
+
+![searching for priority in the man page](images/ss7.png)
+
+4. To find the option to format the output of the command to be a json, use the command: `/format` in the man page.
+
+![searching for format option in the man page](images/ss8.png)
+
+![searching for json format option in the man page](images/ss9.png)
+
+5. Combine the options and use the command `sudo journalctl -b --priority=warning --output=json-pretty`
+
+- Note: If `sudo` is not used, then the output can only be seen by users in the group "adm" or "systemd-journal"
+
+![output of the jounalctl command](images/ss10.png)
+
+## Part Four
+
+1. Add a new user by using the command: `sudo useradd -ms /bin/bash user`.
+
+2. Set a password for the user by using the command: `passwd user`.
+
+![creating a new user](images/ss11.png)
+
+3. The image below shows the contents of the file `find_users`
+
+![find users script](images/ss12.png)
+
+The output of running the script
+
+![running the script](images/ss13.png)
+
+ 
+
+
 
